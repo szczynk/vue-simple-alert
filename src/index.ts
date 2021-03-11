@@ -92,7 +92,9 @@ export class VueSimpleAlert {
     });
   }
 
-  public static fire(options: SweetAlertOptions): Promise<SweetAlertResult> {
+  public static fireAlert(
+    options: SweetAlertOptions
+  ): Promise<SweetAlertResult> {
     return Swal.fire(options);
   }
 
@@ -103,7 +105,7 @@ export class VueSimpleAlert {
     Vue.alert = VueSimpleAlert.alert;
     Vue.confirm = VueSimpleAlert.confirm;
     Vue.prompt = VueSimpleAlert.prompt;
-    Vue.fire = VueSimpleAlert.fire;
+    Vue.fireAlert = VueSimpleAlert.fireAlert;
 
     // Instance properties
     if (!Vue.prototype.hasOwnProperty("$alert")) {
@@ -115,8 +117,8 @@ export class VueSimpleAlert {
     if (!Vue.prototype.hasOwnProperty("$prompt")) {
       Vue.prototype.$prompt = VueSimpleAlert.prompt;
     }
-    if (!Vue.prototype.hasOwnProperty("$fire")) {
-      Vue.prototype.$fire = VueSimpleAlert.fire;
+    if (!Vue.prototype.hasOwnProperty("$fireAlert")) {
+      Vue.prototype.$fireAlert = VueSimpleAlert.fireAlert;
     }
   }
 }
@@ -126,14 +128,14 @@ declare module "vue/types/vue" {
     $alert: typeof VueSimpleAlert.alert;
     $confirm: typeof VueSimpleAlert.confirm;
     $prompt: typeof VueSimpleAlert.prompt;
-    $fire: typeof VueSimpleAlert.fire;
+    $fireAlert: typeof VueSimpleAlert.fireAlert;
   }
 
   interface VueConstructor {
     alert: typeof VueSimpleAlert.alert;
     confirm: typeof VueSimpleAlert.confirm;
     prompt: typeof VueSimpleAlert.prompt;
-    fire: typeof VueSimpleAlert.fire;
+    fireAlert: typeof VueSimpleAlert.fireAlert;
   }
 }
 

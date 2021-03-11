@@ -256,7 +256,7 @@ export default class App extends Vue {
       `
     };
 
-    this.$fire(options).then((r: SweetAlertResult) => {
+    this.$fireAlert(options).then((r: SweetAlertResult) => {
       if (r.value) this.$alert(r.value, "Result");
     });
   }

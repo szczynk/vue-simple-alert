@@ -94,7 +94,7 @@ For detailed usage, refer to [sweetalert2](https://sweetalert2.github.io) docume
 ```javascript
 // in any component
 
-this.$fire({
+this.$fireAlert({
   title: "Title",
   text: "text",
   type: "success",
