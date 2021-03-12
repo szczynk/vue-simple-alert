@@ -8,14 +8,3 @@ node_modules/
 
 # Local history
 .history/
-
-# Dist
-/.vscode
-/docs
-/example
-/src
-.editorconfig
-.eslintignore
-.eslintrc.js
-package-lock.json
-tsconfig.json

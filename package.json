@@ -6,8 +6,7 @@
   "types": "./lib/index.d.ts",
   "scripts": {
     "dev": "tsc -w",
-    "build": "tsc",
-    "postinstall": "cd ./node_modules/vue-simple-alert && npm install && npm run build"
+    "build": "tsc"
   },
   "dependencies": {
     "sweetalert2": "^8.18.6"
