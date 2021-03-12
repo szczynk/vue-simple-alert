@@ -10,5 +10,12 @@ node_modules/
 .history/
 
 # Dist
-/dist/
-/lib/
+/.vscode
+/docs
+/example
+/src
+.editorconfig
+.eslintignore
+.eslintrc.js
+package-lock.json
+tsconfig.json
