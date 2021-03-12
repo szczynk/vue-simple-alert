@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
-    "postinstall": "cd ./node_modules/vue-simple-alert && npm install && npm run build"
+    "postinstall": "npm install && npm run build"
   },
   "dependencies": {
     "sweetalert2": "^8.18.6"
